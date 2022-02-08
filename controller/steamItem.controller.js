@@ -50,7 +50,7 @@ class SteamItemController {
     async getAllDB(req, res) {
         try {
             const allItems = await SteamItem.find();
-            res.json({allItems})
+            res.json(allItems)
         } catch
             (e) {
             res.status(400).json({message: `Can not get all items`})
