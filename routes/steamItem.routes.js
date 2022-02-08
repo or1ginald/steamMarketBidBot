@@ -3,9 +3,10 @@ const router = new Router();
 const steamItemController = require('../controller/steamItem.controller');
 
 router.post('/', steamItemController.createSteamItem);
-router.get('/', steamItemController.getSteamItems);
-router.get('/:id', steamItemController.getOneSteamItem);
-router.put('/:id', steamItemController.updateSteamItem);
-router.delete('/:id', steamItemController.deleteSteamItem);
+router.get('/:tg_id', steamItemController.getSteamItems);
+router.get('/:tg_id', steamItemController.getAllDB);
+router.get('/items/:item_id', steamItemController.getOneSteamItem);
+router.patch('/:item_id', steamItemController.updateSteamItem);
+router.delete('/:item_id', steamItemController.deleteSteamItem);
 
 module.exports = router;
